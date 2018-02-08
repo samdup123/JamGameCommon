@@ -21,7 +21,13 @@ CentralDataBase.init = function(resources)
       end
     end,
 
-    read = function(tag) return systemData[tag].data end,
+    read = function(tag)
+      if systemData[tag] then
+        return systemData[tag].data
+      else
+        return nill
+      end
+    end,
 
     subscribe = function(tag, callback)
       table.insert(systemData[tag].subscriptions, callback)
