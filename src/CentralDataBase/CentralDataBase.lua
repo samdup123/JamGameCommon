@@ -25,7 +25,7 @@ CentralDataBase.init = function(resources)
       if systemData[tag] then
         return systemData[tag].data
       else
-        return nill
+        return nil
       end
     end,
 
